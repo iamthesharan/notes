@@ -4,8 +4,8 @@
 --------
 
 Process Status:
-ps command is used to get the process status.
-ps -e displays all the process which are also not crontolled by terminals.
+ps command is used to get the process status for the current user.
+ps -e displays all the process running on the system.
 -f --> displays UID, PID, parent ID.
 
 
@@ -18,7 +18,7 @@ A daemon is a type of program on Unix-like operating systems that runs unobtrusi
 rather than under the direct control of a user, waiting to be activated by the occurance of a specific event or condition. 
 Daemons are usually instantiated as processes
 
-Step 1: Create a file that needs to be run as daemon process. Its a good practive to keep the script name ending with d, like timed, messaged.
+Step 1: Create a file that needs to be run as daemon process. Its a good practice to keep the script name ending with d, like timed, messaged.
 Step 2: Create a file in etc/init.d/ and here create a daemon Script.
 
 #!/bin/sh

@@ -33,7 +33,7 @@ echo "Hello World" > /dev/pts/1
 
 File System.
 /etc  --> contains sensitive Config files.
-/bin  --> constains System Utilities and binary executables like ls, cat and other commands
+/bin  --> contains System Utilities and binary executables like ls, cat and other commands
           To identy the Command location, type  "which less"
 /sbin --> Commands that are intended to used by the super user like mount, mkfs
 /dev  --> contains device files
