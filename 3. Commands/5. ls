@@ -1,3 +1,0 @@
-get the inode no. -> ls -i
-get the no of blocks occupied by file --> ls -lsh
-Recursive Listing --> ls -lR
