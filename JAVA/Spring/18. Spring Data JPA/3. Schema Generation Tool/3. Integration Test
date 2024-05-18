@@ -1,0 +1,21 @@
+So if you create a Test Class to test the DAO Layer.
+you will put @DataJpaTest. 
+And From the Command Liner you will be adding the Data into the Repository.
+
+Let's say you have 2 Profiles one for Local and other one is the default.
+the Default Profile has h2 Configuration sets to True,
+whereas the local profile has mysql Configuration.
+
+So if You want to run the Test only in local ie. the Profile with mysql Database?
+Then You Should provide @ActiveProfile("local") over the Test Class.
+Note** Active Profiles are only used in TEst Cases to activate the Profile While Running
+
+
+Also in the Command Liner from where you're putting the data for testing in the Repository, 
+over that class you need to specify @Profile("local") depending on the Test Case.
+
+
+When you use @DataJapTest over the Test class, Spring will Override the Datasource to h2 by Default.
+To avoid this you need to use annotation:
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE) over the Test Class
+

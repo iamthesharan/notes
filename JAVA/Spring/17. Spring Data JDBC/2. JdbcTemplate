@@ -1,0 +1,49 @@
+jdbcTemplate.setQueryTimeout(5). Timeout set for 5 Sec
+
+
+RowCallbackHandler -> It is Functional Interface having lambda method void processRow(ResultSet rs)
+So let's say if the ResultSet is returning some value and you want to perform callback just after that.
+
+
+String sql = "SELECT * FROM your_table";
+
+RowCallbackHandler rowCallbackHandler = rs -> {
+    while (rs.next()) {
+        // Process each row in the ResultSet
+        // For demonstration purposes, we'll print the data from each row
+        String data = rs.getString("column_name");
+        System.out.println(data);
+    }
+};
+
+jdbcTemplate.query(sql, rowCallbackHandler);
+
+
+-- Automatically Wraps the ResultSet with JobDetailsDto if the field matches the Database Column : 
+BeanPropertyRowMapper<JobDetailsDto> beanPropertyRowMapper = BeanPropertyRowMapper.newInstance(JobDetailsDto.class);
+
+Important Methods:
+
+List<T> queryForList(String sql, Class<T> elementType)
+<T> T queryForObject(String sql, Class<T> requiredType)
+<T> T queryForObject(String sql, RowMapper<T> rowMapper) 
+
+To Call Stored Procedure:
+
+return jdbcTemplate.execute(callSql, new CallableStatementCallback<String>() {
+    @Override
+    public String doInCallableStatement(CallableStatement cs) throws SQLException {
+        // Set the input parameters
+        cs.setString(1, param1);
+        cs.setString(2, param2);
+        
+        // Register the output parameter
+        cs.registerOutParameter(3, Types.VARCHAR);
+        
+        // Execute the stored procedure
+        cs.execute();
+        
+        // Retrieve the output parameter value
+        return cs.getString(3);
+    }
+});

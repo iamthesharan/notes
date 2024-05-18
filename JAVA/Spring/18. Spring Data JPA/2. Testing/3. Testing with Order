@@ -1,0 +1,10 @@
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) - Add this Annotation over the class to execute the Test in Order.
+
+Use @Order(1), @Order(2) annotations like this to order the test methods.
+Note** while you apply order, the Transaction happened on the Specific method will be rolledback before going to next order method.
+
+In Order to save the Test changes inn Testing Context, You can use commit over the method.
+
+Rarely we use Commit. Not Recommended.
+
+

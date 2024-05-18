@@ -1,0 +1,5 @@
+For Testing in Spring boot you use @SpringBootTest.
+This Will Load Everything in Context.
+
+Let's Say if you want to Test only the DAO Layer, then why Should you load Everything in Context like JMS etc.
+So you will be using @DataJpaTest over the test class.

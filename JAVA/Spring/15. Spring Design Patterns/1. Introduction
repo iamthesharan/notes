@@ -1,0 +1,76 @@
+Repository Pattern:
+Description: Separates the logic that retrieves data from the underlying storage (e.g., a database) from the business logic in the application.
+Example: Spring Data JPA provides a repository pattern where you define interfaces extending JpaRepository to interact with the database.
+
+Scheduler Pattern:
+Description: Executes tasks at scheduled intervals or according to a specific schedule.
+Example: Spring Boot provides the @Scheduled annotation and TaskScheduler for implementing scheduled tasks within an application.
+
+
+Template Method Pattern:
+Description: Defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.
+Example: In Spring, JdbcTemplate is a good example where it provides a template for JDBC operations, and specific methods can be overridden in subclasses.
+
+
+Strategy Pattern:
+Description: Defines a family of algorithms, encapsulates each algorithm, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+Example: Spring's RestTemplate allows you to set different ClientHttpRequestFactory implementations, providing a strategy for making HTTP requests.
+
+Decorator Pattern:
+Description: Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
+Example: Spring AOP (Aspect-Oriented Programming) uses the decorator pattern to add cross-cutting concerns to the application.
+
+
+Proxy Pattern:
+Description: Provides a surrogate or placeholder for another object to control access to it.
+Example: Spring's AOP uses dynamic proxies to apply aspects to target beans.
+
+
+Observer Pattern:
+Description: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+Example: Spring's event-driven programming model uses the observer pattern. You can create custom events and listeners using the ApplicationEvent and ApplicationListener interfaces.
+
+Chain of Responsibility Pattern:
+Description: Passes a request along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+Example: Spring's HandlerInterceptor in Spring MVC allows you to intercept requests and responses, forming a chain of interceptors.
+
+Builder Pattern:
+Description: Separates the construction of a complex object from its representation so that the same construction process can create different representations.
+Example: Spring's RestTemplateBuilder provides a fluent API for building RestTemplate instances.
+
+Immutable Object Pattern:
+Description: Objects whose state cannot be modified after creation. This can lead to more predictable and thread-safe code.
+Example: Spring Framework encourages immutability in certain scenarios, and immutable objects can be used as method parameters or return values.
+
+
+State Pattern:
+Description: Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+Example: Spring's state machine provides a way to model and execute state machines within a Spring application.
+
+Visitor Pattern:
+Description: Represents an operation to be performed on elements of an object structure. It lets you define a new operation without changing the classes of the elements.
+Example: In Spring, the BeanPostProcessor interface is a form of the visitor pattern, allowing you to process beans during their initialization.
+
+Command Pattern:
+Description: Encapsulates a request as an object, thereby allowing for parameterization of clients with different requests, queuing of requests, and logging of the parameters.
+Example: Spring's JdbcTemplate encapsulates SQL queries as command objects, allowing for the execution of SQL queries.
+
+
+Retry Pattern:
+Description: Automatically retries a failed operation with the hope that it will succeed on subsequent attempts.
+Example: Spring's @Retryable annotation can be used to add retry functionality to methods in a Spring Bean.
+
+Composite Pattern:
+Description: Composes objects into tree structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly.
+Example: Spring's ApplicationContext can be seen as a composite of various beans, each representing a component of the application.
+
+
+Chain of Responsibility Pattern (Validation):
+Description: Validates input by passing it through a chain of validators, each responsible for a specific aspect of validation.
+Example: Spring Boot applications can use validation annotations (@NotNull, @Size, etc.) along with custom validators to implement a chain of responsibility for input validation.
+
+
+API Gateway Pattern:
+Description: Provides a single entry point for managing and securing APIs in a microservices architecture.
+Example: Spring Cloud Gateway or Netflix Zuul can be used as API gateways to manage and route requests in a microservices environment.
+These additional patterns cover a range of concerns including microservices communication, migration strategies, scheduled tasks, and more. Understanding these patterns can help you design and implement robust and scalable Spring Boot applications.

@@ -1,0 +1,8 @@
+@Entity - To Tell Class is a DB Entity.
+@Id - Primary key of the Table
+@GeneratedValue - Signifies the Strategy of Creating primary key
+
+@GeneratedValue(strategy = GenerationType.AUTO)
+GenerationType.AUTO - Automatically Selects Genetration Type Based on Databases.For MySQL, it Selects GenerationType.IDENTITY
+GenerationType.IDENTITY - Lets database fills the ID value with AutoIncrement.
+GenerationType.Table - Assignement of IDs based on the IDs Stored in Some pool.

@@ -1,0 +1,20 @@
+// Setting Up Datasource:
+
+spring.datasource.url=jdbc:oracle:thin:@//<hostname>:<port>/XE
+spring.datasource.username=<username>
+spring.datasource.password=<password>
+spring.datasource.driver-class-name:oracle.driver.OracleDriver
+
+
+//JPA Properties:
+
+spring.jpa.properties.hibernate.show_sql=true // this will show the SQLs
+spring.jpa.properties.hibernate.format_sql=true // this will format the SQL
+spring.jpa.database=oracle
+
+//LOGGING:
+logging.level.org.hibernate.orm.jdbc.bind= TRACE
+
+
+//H2:
+spring.h2.console.enabled= true

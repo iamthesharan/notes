@@ -1,0 +1,16 @@
+Cirular Dependency occurs when bean A waits for Bean B and Bean B waits for Bean A 
+
+@Component
+public class Test {
+
+    @Autowired
+    private Test1 test1;  
+}
+
+
+@Component
+public class Test1 {
+
+    @Autowired
+    private Test test;
+}

@@ -1,0 +1,34 @@
+UUID - Universally Unique Identifier - 128 Bit Value
+Common to use a primary Key, Can help index Performance
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JdbcTypeCode(value = Types.VARCHAR)
+    @Column(length = 36,columnDefinition = "VARCHAR(36)", updatable = false, insertable = false)
+    private UUID objId;
+    private Long customerId;
+
+ A UUID in Java represents a universally unique identifier as defined by RFC 4122. It is a 128-bit value and can be created using various methods provided by the java.util.UUID class, such as randomUUID() or by parsing a string representation using fromString(String)
+ When you define a variable as UUID, y@co, such as generating unique identifiers, but it does not inherently handle persistence or database-related concerns.
+
+
+
+IETF RFC 4122 - International Standards for UUID Generation
+Hibernate by Default implements a Custom Generator
+It can also be configured to Genereate IETF RFC 4122 Complaint UUID
+
+So you here you should create a binary Datatype Column in Database.
+
+
+    @Id
+    @GeneratedValue(generator = "uuid")  --> This is the Generic Generator name that we will Be using
+    @GenericGenerator(name="uuid", strategy = "org.hibernate.id.UUIDGenerator")  // The Strategy can be of 2 type org.hibernate.id.UUIDGenerator or uuid2
+    @Column(columnDefinition = "BINARY(16)", updatable = false, insertable = false)
+    private UUID objId;
+
+
+Strategy uuid2 - The "uuid2" strategy delegates the UUID generation to the UUID.randomUUID() method provided by Java. It's called "uuid2" because it's the second UUID strategy introduced in Hibernate.
+org.hibernate.id.UUIDGenerator": This strategy directly refers to the UUIDGenerator class provided by Hibernate. When using this strategy, Hibernate generates UUID values for primary keys using its own UUID generation mechanism.
+
+Using "org.hibernate.id.UUIDGenerator" provides more control and customization options for UUID generation, such as specifying the UUID format or using a different UUID generation algorithm.
+Using "uuid2" is more concise and relies on the standard Java UUID generation mechanism. It may be preferred for its simplicity and standardization.

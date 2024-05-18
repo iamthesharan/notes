@@ -1,0 +1,30 @@
+When you're using @SpringBootTest, Command Line, Controllers will also be in Context.
+
+    @Test
+    public void customerRepositoryTest(){
+        long count = customerRepository.count();
+        AssertionsForClassTypes.assertThat(count).isGreaterThan(0); 
+        //So here the Assertion will be true as Count>0 since you've hardcoded the insert values in the bootstrap phase.
+    }
+
+
+    But Let's say if you use @DataJpaTest Annotation, Command Line, Controllers will not be in Context.
+    Hence the Above test will Fail as you'll get the count as 0 when you run the test.
+
+
+    @Test
+    public void customerRepositoryTest(){
+        long count = customerRepository.count();
+        AssertionsForClassTypes.assertThat(count).isEqualTo(0);
+        customerRepository.save(new Customer(123L,"Shashank Sharan"));
+        AssertionsForClassTypes.assertThat(customerRepository.count()).isEqualTo(1);
+    }
+
+    This Test will pass if the class is annotated with @DataJpaTest
+
+Note if you want to Load some other Classes or packages in Context when using @DataJpaTest,
+You can use 
+@ComponentScan(basePackages = {"com.blah.blah"})
+OR
+@ComponentScan(basePackageClass = {BasePackageClass.class})
+

@@ -1,0 +1,8 @@
+Equals and Hashcodes method:
+Let's Say you want to check the equality of the Object.
+You Retirved the Object from the Persistance Layer.
+And then Modify the Object.
+If you test the Equality of the Object with the equals method, Hibernate will return objects are not equal.
+So better to implements equals method and hashcode methods with only specefic fields to check the equility.
+
+Its Recommended to use equals and Hashcode

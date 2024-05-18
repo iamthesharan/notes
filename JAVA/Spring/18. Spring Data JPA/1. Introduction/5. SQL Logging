@@ -1,0 +1,13 @@
+To enable SQL Logging use:
+    spring.jpa.show-sql=true
+
+If you want to Show the Bind Parameters in SQL Logs then:
+
+    spring.jpa.properties.hibernate.show_sql=true
+
+If you want to Format the Query
+    spring.jpa.properties.hibernate.format_sql=true
+
+
+To Specify Log Level for Hibernate:
+    logging.level.org.hibernate.orm.jdbc.bind=TRACE

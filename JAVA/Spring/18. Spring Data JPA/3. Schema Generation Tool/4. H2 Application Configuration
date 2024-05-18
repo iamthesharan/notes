@@ -1,0 +1,14 @@
+lets say your h2 database has a test scope in application and you also want it during the application run.
+So for that you can create a profile and add the h2 dependency without test scope.
+
+<profiles>
+    <profile>
+        <id>h2</id>
+        <dependencies>
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+            </dependency>
+        </dependencies>
+    </profile>
+</profiles>

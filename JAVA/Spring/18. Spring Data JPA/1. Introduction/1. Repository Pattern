@@ -1,0 +1,9 @@
+Spring Data JPA -  Implements Repository Pattern
+Repository is an Abstraction data and Persistence Operation
+Repository Layer - Handle Relational Data Mapping
+                 - Query Operations
+                 - JDBC
+
+
+Spring Data JPA is an Abstraction Layer.
+Spring Data JPA internally Uses hibernate.

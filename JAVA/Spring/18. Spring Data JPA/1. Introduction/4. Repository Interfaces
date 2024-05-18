@@ -1,0 +1,10 @@
+CrudRepository - This Extends Repository Interface. Has CRUD Type Operations.
+PageAndSortingRepository - For Pageintation. This Extends CrudRepository.
+ JpaRepository - extends PageAndSortingRepository,QueryByExampleExecuter
+
+ creating a Repository for Entity Class:
+
+ class BookRepository extends JpaRepository<Book,Long> {
+    
+ }
+

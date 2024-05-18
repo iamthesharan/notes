@@ -1,0 +1,7 @@
+none - Disable Schema Generation Tool
+create-only - Create Database Schema for JPA Entities
+drop - Drop Database table related to JPA Entities
+create - Drop Database Schema and re-creates from JPA Entities
+create-drop - Drop Database Schema and Recreates it and then Drops it when shutting down
+validate - Validates Schema, fatal error if wrong
+update - Update Schema for JPA Entities.
