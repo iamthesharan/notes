@@ -1,0 +1,20 @@
+Distinct            - findDistinctByLastNameAndFirstName
+And                 - findByFirstNameAndLastName
+Or                  - findByFirstNameOrAadharId
+Between             - findByDateBetween
+Less Than           - findByAgeLessThan
+Less Than Equal     - findByAgeLessThanEqual
+Greater Than        - findByAgeGreaterThan
+Greater Than Equal  - findByAgeGreaterThanEqual
+Is Null             - findByNameIsNotNull
+Like                - findByNameLike
+NotLike             - findByNameNotLike
+Starting With       - findByNameStartingWith
+Ending With         - findByNameEndingWith
+Containing          - findByNanmeContaining
+Order By            - findByAgeOrderByLastnameDesc
+In                  - findByAgeIn(Collection<Age> ages)
+Not In              - findByAgeNotIn(Collection<Age> ages)
+True                - findByActiveTrue()
+False               - findByActiveFalse()
+Ignore Case         - findByFirstNameIgnoreCase

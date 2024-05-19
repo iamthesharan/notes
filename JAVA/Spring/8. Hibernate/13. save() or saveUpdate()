@@ -9,7 +9,7 @@ public Serializable saveOrUpdate(Object object)  throws HibernateException:
 
 Even if the changes are made to the persistant entity in different session, it will overwrite that entity
 
-			Student student=new Student("Khushboo","Shivhare","khushbos@amdocs.com");
+			Student student=new Student("Aditya","Birla","adityabirla@gmail.com");
 			session.save(student);
 			session.getTransaction().commit();
 			session=factory.getCurrentSession();

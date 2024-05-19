@@ -1,0 +1,11 @@
+Default Fetch Types:
+OneToMany, ManyToMany - Default Fetch type is Lazy
+OneToOne, ManyToOne - Defualt Fetch type is Eager
+
+Default Cascade Types: No Default Cascade configuration
+Cascading makes Sense only for Parent-Child Association.
+Cascading from Child to Parent Can be disastrous.
+
+CascadeType.PERSIST - Saves Parent along with Child Entity 
+CascadeType.MERGE   - When you are doing update on parent, same operation will be applied to Child to merge.
+CascadeType.REFRESH - When you are loading Fresh Parent Entity, the Child will be loaded as Fresh Entity

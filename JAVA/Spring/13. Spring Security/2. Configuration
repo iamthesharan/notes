@@ -189,7 +189,7 @@ Development Process:
             protected void configure(AuthenticationManagerBuilder auth) throws Exception {
                 UserBuilder users=User.withDefaultPasswordEncoder(); // This method is depreceated.
                 auth.inMemoryAuthentication().withUser(users.username("Shashank").password("Sshar012").roles("DEVELOPER"));
-                auth.inMemoryAuthentication().withUser(users.username("Khushboo").password("March2021").roles("DEVELOPER"));
+                auth.inMemoryAuthentication().withUser(users.username("Prasad").password("March2021").roles("DEVELOPER"));
                 auth.inMemoryAuthentication().withUser(users.username("Shashank").password("Sbolia").roles("LEAD"));
             }
 

@@ -27,7 +27,7 @@ Development Process:
             public List<Student> getStudents() {
                 List<Student> theStudent=new ArrayList<Student>();
                 theStudent.add(new Student("Shashank","Sharan"));
-                theStudent.add(new Student("Khushboo","Shivhare"));
+                theStudent.add(new Student("Nalin","Agarwal"));
                 return theStudent;
             }
         }
@@ -57,7 +57,7 @@ Now we will Refactor the Code.
 
                     theStudent=new ArrayList<Student>();
                     theStudent.add(new Student("Shashank","Sharan"));
-                    theStudent.add(new Student("Khushboo","Shivhare"));
+                    theStudent.add(new Student("Nalin","Agarwal"));
                     return theStudent;
                 }
             }

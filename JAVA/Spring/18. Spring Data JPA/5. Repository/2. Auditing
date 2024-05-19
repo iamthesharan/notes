@@ -1,0 +1,24 @@
+There are four Autditing Annotation:
+@CreatedDate
+@CreatedBy
+@LastModifiedDate
+@LastModifiedBy
+
+
+These Annotation you should Provide at Base Entity.
+Also Over Base Entity you should use @MappedSuperClass
+Also add @EntityListeners(AuditingEntityListener.class) over base entity class
+This Listner will keep Listening any Changes made to the Record.
+
+
+Another thing need to Do:
+Create a class implementing AuditAware Interface
+
+@Component
+class AuditAwareImpl implements AuditAware<String> {
+
+}
+
+
+And in Main Class use the annotations
+@EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")

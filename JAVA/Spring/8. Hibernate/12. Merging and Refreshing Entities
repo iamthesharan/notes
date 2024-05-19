@@ -8,7 +8,7 @@ public void refresh(Object object, LockMode lockMode) throws HibernateException
 
 			Student student=(Student)session.get(Student.class, 23);
 			System.out.println(student.getFirstName()); // Shashank
-			student.setFirstName("Khushboo");           // Persistance Object First Name Changed to Khushboo
+			student.setFirstName("Prasad");           // Persistance Object First Name Changed to 
 			session.refresh(student);                   // Here we have refreshed the Persistance Object so the Object Changed its state to original State
 			System.out.println(student.getFirstName()); // Shashank
 
